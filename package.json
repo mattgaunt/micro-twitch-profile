@@ -1,0 +1,19 @@
+{
+  "name": "micro-twitch-profiles",
+  "version": "1.0.0",
+  "description": "A tiny Node.js microservice to scrape twitch profile data.",
+  "main": "index.js",
+  "author": "Matthew Gaunt <matthew@stormfoundry.co>",
+  "license": "MIT",
+  "scripts": {
+    "start": "micro",
+    "start:dev": "micro-dev",
+    "tests": "standard"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "memory-cache": "^0.2.0",
+    "micro": "^9.3.1",
+    "micro-dev": "^3.0.0"
+  }
+}
