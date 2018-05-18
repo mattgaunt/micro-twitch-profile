@@ -10,7 +10,7 @@ module.exports = async (req, res) => {
   const rateLimit = 500
   const api = axios.create()
   api.defaults.baseURL = `https://api.twitch.tv/kraken/`
-  api.defaults.headers.common['Client-ID'] = 'itj9pv9n9o7ze5796volok7guhbpvs'
+  api.defaults.headers.common['Client-ID'] = process.env.TWITCH_CLIENT_ID
   api.interceptors.request.use(rateLimit)
 
   try {
