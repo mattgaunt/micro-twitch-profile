@@ -4,6 +4,8 @@ const cache = require('memory-cache')
 const axios = require('axios')
 
 module.exports = async (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*')
+
   const { query: { username } } = parse(req.url, true)
   if (!username) return send(res, 401, { message: 'Please supply a valid twitch username in the query parameter.' })
 
@@ -15,8 +17,8 @@ module.exports = async (req, res) => {
 
   try {
     profile = await api.get(`streams/${username}`)
-    data = profile.data.stream ? profile.data.stream : 'offline'
-    statusCode = profile.data.stream ? 401 : 200
+    data = profile.data.stream ? profile.data.stream : { message: 'Offline' }
+    statusCode = profile.data.stream ? 200 : 401
   } catch (err) {
     statusCode = 401
   }
