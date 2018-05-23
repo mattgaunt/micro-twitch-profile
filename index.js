@@ -17,7 +17,7 @@ module.exports = async (req, res) => {
 
   try {
     profile = await api.get(`streams/${username}`)
-    data = profile.data.stream ? profile.data.stream : { message: 'Offline' }
+    data = profile.data.stream ? profile.data.stream : { offline: true }
     statusCode = profile.data.stream ? 200 : 401
   } catch (err) {
     statusCode = 401
