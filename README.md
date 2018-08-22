@@ -8,7 +8,7 @@ Running this microservice...
 
 Your own `micro-twitch-profiles` is one click away with the power of Now.
 
-[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/withspectrum/micro-open-graph)
+[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/mattgaunt/micro-twitch-profiles)
 
 You can also deploy with a single command from the terminal, assuming you have [`now`](https://now.sh) installed:
 
